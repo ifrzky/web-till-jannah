@@ -12,14 +12,19 @@ const App = () => {
         <Navbar />
       </div>
       <div className='__wrappper justify-center items-center min-h-screen'>
-        <Hero />
-        <section className='home'></section>
-        <section className='alquran'>
-          {/* <Quran /> */}
+        <section className='home'>
+          <Hero />
         </section>
+        {/* <section className='alquran'>
+          <Quran />
+        </section> */}
         <section className='prayertime px-10 py-10 flex flex-row'>
-          <ZakatCalc />
-          <PrayerTimes />
+          <div className='flex flex-wrap'>
+            <ZakatCalc />
+          </div>
+          <div className='flex flex-wrap'>
+            <PrayerTimes />
+          </div>
         </section>
         <section className='__article flex flex-wrap px-10 py-10 gap-5 justify-center items-center'>
           <Card />

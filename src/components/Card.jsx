@@ -194,6 +194,9 @@ const Cards = () => {
                     </div>
                 ))}
             </div>
+            <div className="__view_more flex mx10 my-10 justify-center items-center">
+                <Button>View More</Button>
+            </div>
         </div>
     )
 } 
