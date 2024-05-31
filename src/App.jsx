@@ -18,11 +18,11 @@ const App = () => {
         {/* <section className='alquran'>
           <Quran />
         </section> */}
-        <section className='prayertime px-10 py-10 flex flex-row'>
-          <div className='flex flex-wrap'>
+        <section className='__prayertime px-10 py-10 flex flex-col md:flex-row justify-center'>
+          <div className='flex'>
             <ZakatCalc />
           </div>
-          <div className='flex flex-wrap'>
+          <div className='flex'>
             <PrayerTimes />
           </div>
         </section>

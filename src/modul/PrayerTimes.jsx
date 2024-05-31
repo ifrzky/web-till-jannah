@@ -42,13 +42,15 @@ const PrayerTimes = () => {
       <h1 className="text-3xl font-bold mb-4">Prayer Times</h1>
       {Data.map((data, index) => (
         <div key={index} className="mb-8">
-          <h2 className="text-xl font-bold mb-2 flex flex-wrap"></h2>
+          <h2 className="text-xl font-bold mb-2 flex"></h2>
           {data.data.map((monthData, monthIndex) => (
-            <div key={monthIndex} className="mb-4 px-5 py-5 bg-green-500 text-white rounded-lg">
+            <div key={monthIndex} className="mb-4 px-5 py-5 h-fit bg-green-500 text-white rounded-lg">
               <p className="font-bold text-xl px-5 pb-3">{monthData.date.readable}</p>
-              <ul className="list-disc mx-5 my-5 flex flex-row gap-5 justify-center items-center">
+              <div className="flex flex-col flex-wrap">
+              <ul className="list-disc mx-5 my-5 flex flex-wrap gap-5 justify-center items-center">
                 {Object.entries(monthData.timings).map(([prayer, { time, icon }], index) => (
-                  <li key={index} className="mb-1 flex flex-col bg-green-600 rounded-md px-5 py-5 w-[165px] justify-center items-center">
+                <div className="flex">
+                  <li key={index} className="mb-1 flex flex-col bg-green-600 rounded-md px-5 py-5 justify-center items-center">
                     <div className="mr-2 flex">{icon}</div>
                     <div>
                       <h1 className="font-bold text-center">{prayer}</h1> 
@@ -56,8 +58,10 @@ const PrayerTimes = () => {
                       </div>
                     </div>
                   </li>
+                  </div>
                 ))}
               </ul>
+              </div>
             </div>
           ))}
         </div>
